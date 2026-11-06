@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>은혜공방 · 맞춤 기독교 선물</title>
+<meta name="description" content="이름과 말씀을 새겨 만드는 기독교 맞춤 주문제작 선물. 세례, 생일, 새가족 환영, 교회 행사 단체주문.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2v20M5 8h14' stroke='%238a5a3b' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Nanum+Myeongjo:wght@400;700;800&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="loader" id="loader">
+  <svg viewBox="0 0 100 140" class="loader-cross"><path d="M50 10 V130 M20 45 H80"/></svg>
+  <div class="loader-name">은혜공방</div>
+</div>
+
+<header class="site-header" id="header">
+  <div class="wrap nav">
+    <a class="logo" href="#top"><svg viewBox="0 0 24 24"><path d="M12 2v20M5 8h14"/></svg>은혜공방</a>
+    <nav><a href="#occasion">상황별 선물</a><a href="#products">전체 상품</a><a href="#group">단체주문</a></nav>
+    <button class="cart-btn magnetic" id="openCart" aria-label="장바구니 열기">
+      <svg viewBox="0 0 24 24"><path d="M5 7h14l-1.5 12h-11z M9 7a3 3 0 0 1 6 0"/></svg>
+      <b id="cartCount">0</b>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero wrap">
+    <div class="hero-copy">
+      <p class="eyebrow reveal-up">CUSTOM CHRISTIAN GIFTS</p>
+      <h1 class="hero-title" id="heroTitle">마음을 담은 말씀,<br>이름을 새긴 선물</h1>
+      <p class="hero-lead reveal-up">받는 분의 이름과 좋아하는 말씀을 직접 넣어 세상에 하나뿐인 선물을 만드세요. 세례·생일·새가족 환영·교회 행사에 꼭 맞습니다.</p>
+      <div class="hero-cta reveal-up">
+        <a class="btn btn-primary magnetic" href="#products"><span>맞춤 선물 만들기</span></a>
+        <a class="btn btn-ghost" href="#group">단체주문 안내</a>
+      </div>
+    </div>
+    <div class="hero-art" id="heroArt">
+      <canvas id="lightDust"></canvas>
+      <div class="halo"></div>
+      <div class="hero-product" id="heroProduct"></div>
+      <div class="hero-type" id="heroType">사랑하는 은혜에게</div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="marquee-track" id="marquee"></div></div>
+
+  <section class="wrap steps-sec">
+    <h2 class="sec-title">세 걸음이면 충분해요</h2>
+    <div class="steps">
+      <article class="step"><span>01</span><h3>상품 고르기</h3><p>상황과 받는 분에게 맞는 기본 상품을 선택하세요.</p></article>
+      <article class="step"><span>02</span><h3>이름·말씀 넣기</h3><p>추천 말씀을 고르거나 직접 입력하고, 미리보기로 확인하세요.</p></article>
+      <article class="step"><span>03</span><h3>인쇄·배송</h3><p>시안 확인 후 3~5일 안에 제작해 보내드립니다.</p></article>
+    </div>
+  </section>
+
+  <section class="occasion" id="occasion">
+    <div class="occ-pin">
+      <div class="wrap occ-head">
+        <h2 class="sec-title">어떤 마음을 전하고 싶으세요?</h2>
+        <p class="sub">상황을 고르면 어울리는 상품을 보여드려요</p>
+      </div>
+      <div class="occ-track" id="occTrack"></div>
+    </div>
+  </section>
+
+  <section class="wrap products" id="products">
+    <h2 class="sec-title">전체 상품</h2>
+    <div class="chips" id="chips"></div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="wrap" id="group">
+    <div class="banner">
+      <div>
+        <h2 class="sec-title light">교회·선교회 단체주문</h2>
+        <p>수련회, 성탄·부활절, 교사 감사, 새가족 환영 선물을 수량별 할인으로 준비하세요. 교회 로고·표어 인쇄도 가능합니다.</p>
+      </div>
+      <div class="tier">
+        <div><small>10개 이상</small><b data-count="5">0</b>%</div>
+        <div><small>30개 이상</small><b data-count="10">0</b>%</div>
+        <div><small>100개 이상</small><b data-count="15">0</b>%</div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="wrap footer">은혜공방 · 기독교 맞춤 주문제작 선물 · 결제와 배송은 준비 중입니다.</footer>
+
+<div class="overlay" id="overlay"></div>
+
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="mName">
+  <button class="close" id="closeModal" aria-label="닫기">×</button>
+  <div class="editor">
+    <div class="stage"><div id="stage"></div><small>실제 인쇄 시안은 주문 후 확인해 드립니다</small></div>
+    <div class="form">
+      <div class="tags" id="mTags"></div>
+      <h3 id="mName"></h3>
+      <p class="muted" id="mDesc"></p>
+      <div class="field"><label for="fName">받는 분 이름 / 문구</label><input id="fName" maxlength="20" placeholder="예) 사랑하는 김은혜 집사님"></div>
+      <div class="field"><label for="fVerse">말씀 선택</label><select id="fVerse"></select></div>
+      <div class="field" id="customWrap" hidden>
+        <label for="fCustom">말씀 직접 입력</label>
+        <textarea id="fCustom" maxlength="80" placeholder="말씀 본문 (최대 80자)"></textarea>
+        <input id="fRef" maxlength="20" placeholder="출처 예) 시편 23:1">
+      </div>
+      <div class="field"><span class="lbl">글씨체</span><div class="seg" id="fFont"></div></div>
+      <div class="field"><span class="lbl">상품 색상</span><div class="swatches" id="fColor"></div></div>
+      <div class="field"><span class="lbl">수량</span>
+        <div class="qty"><button id="qMinus" aria-label="수량 줄이기">−</button><input id="fQty" type="number" min="1" value="1" aria-label="수량"><button id="qPlus" aria-label="수량 늘리기">+</button></div>
+      </div>
+      <div class="total"><div><div class="muted" id="mUnit"></div><small id="mDisc"></small></div><b id="mTotal"></b></div>
+      <button class="btn btn-primary wide" id="addCart"><span>장바구니 담기</span></button>
+    </div>
+  </div>
+</div>
+
+<aside class="drawer" id="drawer" aria-label="장바구니">
+  <div class="drawer-head"><b>장바구니</b><button class="close static" id="closeCart" aria-label="닫기">×</button></div>
+  <div class="items" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="sum"><span>합계</span><b id="cartTotal">0원</b></div>
+    <button class="btn btn-primary wide" id="checkout"><span>주문하기</span></button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>
